@@ -432,11 +432,12 @@ width: 200px;
   border: none;
 }
 .hometext{
-background-attachment: relative;
+background-attachment: fixed;
 background-position-x: center;
-border-radius: 3rem;
-   
-  
+border-radius: 20rem;
+background-position: center;
+  background-size: contain;
+  background-position-y: center -40px;
 }
 .footer{
 display: inline;
