@@ -1,0 +1,478 @@
+*{ 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins" ,
+    sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5rem;
+}
+body{
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--base-clr);
+  color: var(--text-clr);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+#sidebar{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 300px;
+  padding: 5px 1em;
+  background-color: var(--base-clr);
+  border-right: 1px solid var(--line-clr);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+#sidebar.close{
+  padding: 5px;
+  width: 60px;
+}
+#sidebar ul{
+  list-style: none;
+}
+#sidebar > ul > li:first-child{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  .logo{
+    font-weight: 600;
+  }
+}
+#sidebar ul li.active a{
+  color: var(--accent-clr);
+
+  svg{
+    fill: var(--accent-clr);
+  }
+}
+
+#sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
+  border-radius: .5em;
+  padding: .85em;
+  text-decoration: none;
+  color: var(--text-clr);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.dropdown-btn{
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+#sidebar svg{
+  flex-shrink: 0;
+  fill: var(--text-clr);
+}
+#sidebar a span, #sidebar .dropdown-btn span{
+  flex-grow: 1;
+}
+#sidebar a:hover, #sidebar .dropdown-btn:hover{
+  background-color: var(--hover-clr);
+}
+#sidebar .sub-menu{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+
+  > div{
+    overflow: hidden;
+  }
+}
+#sidebar .sub-menu.show{
+  grid-template-rows: 1fr;
+}
+.dropdown-btn svg{
+  transition: 200ms ease;
+}
+.rotate svg:last-child{
+  rotate: 180deg;
+}
+#sidebar .sub-menu a{
+  padding-left: 2em;
+}
+#toggle-btn{
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: .5em;
+  background: none;
+  cursor: pointer;
+  
+
+  svg{
+    transition: rotate 150ms ease;
+  }
+}
+#toggle-btn:hover{
+  background-color: var(--hover-clr);
+}
+
+main{
+  padding: min(30px, 7%);
+}
+main p{
+  color: var(--secondary-text-clr);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.container{
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2, p { margin-top: 1em }
+}
+.sub-menu{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+
+}
+.sub-menu.show{
+max-height:fit-content;
+transition: .5s;
+}
+
+li{
+  font-size: 12px;
+}
+#sidebar {
+  height: 100vh; /* Full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #11121a; 
+  position: sticky;
+}
+
+/* For Webkit-based browsers (Chrome, Edge, Safari) */
+#sidebar::-webkit-scrollbar {
+  width: 8px; /* Width of scrollbar */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar handle */
+  border-radius: 4px; /* Rounded corners */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker on hover */
+
+
+}
+#sidebar.side {
+  transform: translateX(100%);
+  transition: .5s;
+}
+#sidebar {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+/* Default Sidebar (Visible) */
+#sidebar {
+  width: 300px;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* When .side class is added (Sidebar Hidden) */
+#sidebar.side {
+  transform: translateX(-100%);
+  width: 20%;
+  padding: 0;
+  border: none;
+}
+main {
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+body.sidebar-hidden main {
+  margin-left: 0;
+  width: 100%;
+}
+.home{
+  font-size: large;
+
+}
+/* Body styles*/
+.econtainer{
+  padding: 70px 0;
+  border-bottom: 1px solid #e6e6ef;
+}
+
+.hometext{
+  background-image: url(icons/cells-5594885_1280.jpg);
+  height: 100vh;
+  width: 100%;
+  border-radius: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+justify-content: center;
+align-items: center;
+display: flex;
+margin-top: 20PX;
+margin-bottom:10px;
+}
+.hometext h1{
+  font-size: 2rem;
+  color: teal;
+}
+.Home{
+  border-bottom: 2px solid white;
+}
+/*.epithelium-container{
+  display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.epithelium-box{
+  height: 400px;
+  border-radius: 3rem;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: o.4s ease-in-out;
+}*/
+  
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height */
+  width: 300px; /* Adjust width as needed */
+  background-color: var(--base-clr);
+  border-right: 1px solid var(--line-clr);
+  overflow-y: auto; /* Enables scrolling if the content exceeds viewport height */
+}
+main {
+  margin-left: 300px; /* Same as sidebar width */
+  padding: min(30px, 7%);
+}
+@media (max-width: 800px) {
+  #sidebar {
+    width: px; /* Smaller sidebar */
+  }
+  main {
+    margin-left: 60px; /* Adjust main content accordingly */
+  }
+}
+#sidebar {
+  width: 250px; /* Adjust as needed */
+  background-color: var(--base-clr); 
+  color: #e8eaed;
+  position: fixed; /* Or absolute, depending on your layout */
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto; /* For scroll if content overflows */
+  padding: 20px;
+}
+
+#sidebar span.logo { /* Style the logo */
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center; /* Center the logo */
+}
+
+#toggle-btn {
+  background: none;
+  border: none;
+  color: #e8eaed;
+  cursor: pointer;
+  position: absolute; /* Position it within the sidebar */
+  top: 15px; /* Adjust vertical position */
+  right: 0px; /* Position on the right */
+  font-size: 20px;
+}
+
+.epithelium{
+  display: none;
+}
+.epithelium.pop1{
+  display: block;
+}
+.Home.go{
+  display: none;
+}
+.connective{
+  display:none;
+}
+.cartilage{
+  display: none;
+}
+.bone{
+  display: none;
+}
+.nervous-tissue{
+  display: none;
+}
+
+.propulsion{
+display: none;
+}
+
+.skin{
+display: none;
+}
+n
+.nervous-system{
+  display: none;
+}
+.receptor{
+  display: none;
+}
+.ear{
+display: none;
+}
+
+
+.eye{
+  display: none;}
+  .endocrine{
+    display: none;
+  }
+.git{
+  display: none;
+}
+
+.git-glands{
+  display: none;
+}
+.respiratory{
+  display: none;
+}
+    
+
+.circulatory{
+  display: none;
+}
+
+.immune{
+  display: none;
+}
+
+
+.urinary{
+  display: none;
+}
+
+.reproductive{
+  display: none;
+}
+.nervous-system{
+  display: none;
+}
+.main-btn{
+  display:inline-block;
+align-items: center;
+color: white;
+padding: 10px 20px;
+background-color:red;
+border:2px solid;
+border-color: aliceblue;
+border-radius: 40px;
+cursor:pointer;
+gap: 1.5em;
+transition: transform 0.2s ease,color 0.2s ease;
+box-shadow: 0 0 25px transparent;
+font-size: 1rem;
+}
+.epithelium-container{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap :20px;}
+
+
+
+  @media
+  (max-width:800px){
+
+.sidebar{
+width: 200px;
+}
+.sidebar.side{
+  transform: translateX(-80%);
+  width: 0%;
+  padding: 0;
+  border: none;
+}
+.hometext{
+background-attachment: fixed;
+   background-size: contain;
+   border-radius: 0rem;
+}
+.footer{
+  position: fixed;
+}
+  }
+
+.nav-section {
+    position: absolute;
+    top: 4px; 
+    right: 0px; 
+    
+  
+    color: white; 
+    padding: 10px; 
+}
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+
+}
+.footer ul li a:hover{ 
+  border-bottom: 3px solid var(--bar-color);
+
+}
+.footer ul li{
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer .copyright{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: azure;
+}
+.footer{
+  position: relative;
+}
+html{
+  scroll-behavior: smooth;
+}
