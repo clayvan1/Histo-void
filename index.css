@@ -420,25 +420,38 @@ font-size: 1rem;
 
 
   @media
-  (max-width:800px){
+  (max-width:650px){
 
 .sidebar{
 width: 200px;
 }
 .sidebar.side{
-  transform: translateX(-80%);
+  transform: translateX(-100%);
   width: 0%;
   padding: 0;
   border: none;
 }
 .hometext{
-background-attachment: fixed;
-   background-size: contain;
-   border-radius: 0rem;
+background-attachment: relative;
+background-position-x: center;
+border-radius: 3rem;
+   
+  
 }
 .footer{
-  position: fixed;
+display: inline;
+display: block;
+display: none;
 }
+.toggle-btn{
+  font-size: 9px;
+  width: 10px;
+  height: 5px;
+}
+.hometext h1{
+  font-size: 20px;
+}
+.main{max-width: 100%;}
   }
 
 .nav-section {
