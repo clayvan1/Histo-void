@@ -424,12 +424,14 @@ font-size: 1rem;
 
 .sidebar{
 width: 200px;
+display: none;
 }
 .sidebar.side{
   transform: translateX(-100%);
   width: 0%;
   padding: 0;
   border: none;
+  display: block;
 }
 .hometext{
 background-attachment: fixed;
