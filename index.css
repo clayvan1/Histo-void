@@ -332,6 +332,9 @@ main {
 .cartilage{
   display: none;
 }
+.cartilage.pop3{
+  display: block;
+}
 .bone{
   display: none;
 }
