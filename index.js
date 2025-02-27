@@ -113,6 +113,3 @@ toggleBtn.addEventListener("click", () => {
               });
             }
           });
-
-
-          

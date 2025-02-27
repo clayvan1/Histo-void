@@ -160,7 +160,7 @@ main p{
 }
 .sub-menu.show{
 max-height:fit-content;
-transition: .5s;
+transition: transform 0.2s ease-in-out;
 }
 
 li{
@@ -437,17 +437,18 @@ display: none;
   display: block;
 }
 .hometext{
-background-attachment: fixed;
 background-position-x: center;
 border-radius: 20rem;
 background-position: center;
   background-size:contain;
   background-position-y: center -40px;
+  background-image:url(icons/cells-5594885_1280.jpg);
+  border-radius: 2rem;
 }
 .footer{
 display: inline;
 display: block;
-display: none;
+z-index: 1;
 }
 .toggle-btn{
   font-size: 9px;
@@ -458,7 +459,13 @@ display: none;
   font-size: 20px;
 
 }
+.image{
+  width: 300px;
+}
 .main{max-width: 100%;}
+  }
+  .container{
+    width: 100%;
   }
 
 .nav-section {
@@ -496,7 +503,78 @@ display: none;
 html{
   scroll-behavior: smooth;
 }
-.img{
-  width: 300px;
+.content{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container{
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+width: 100%;
+  h2, p { margin-top: 1em }
+}
+.container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container h2,
+.container p {
+  margin-top: 1em;
+}
+
+.container img {
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+.container:hover img {
+  transform: scale(1.95); 
+}
+.copyright{
+  text-align: center;
+}
+
+.DRAGON {
+  padding-top: 0;
+  padding-bottom: 3rem;
+  letter-spacing: 5px;
+  font-family: monospace;
   overflow: hidden;
+  white-space: nowrap;
+  border-right: 5px solid white;
+  color: white;
+  width: 80%;
+  text-align: right;
+  animation: typing 5s steps(22) infinite, blink-caret .75s step-end infinite; /* Increased typing duration */
+}
+
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  50%, 100% { /* added 50% so it waits before restarting the animation */
+      width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+      border-color: transparent;
+  }
+  50% {
+      border-color:red;
+  }
+}
+
+.copyright {
+  text-align: center;
+  color: white;
 }
