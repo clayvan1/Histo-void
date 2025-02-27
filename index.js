@@ -113,3 +113,21 @@ toggleBtn.addEventListener("click", () => {
               });
             }
           });
+          document.addEventListener('DOMContentLoaded', function() {
+            const mainBtn = document.querySelector('.main-btn'); // Select the button
+          
+            if (mainBtn) { // Check if the button exists
+              mainBtn.addEventListener('click', function() {
+                const homeSection = document.querySelector('.Home');
+                const allSections = document.querySelectorAll('section:not(.Home)'); // Select all sections except Home
+          
+                if (homeSection) {
+                  homeSection.classList.remove('go');
+                }
+          
+                allSections.forEach(section => {
+                  section.classList.remove('pop1', "pop2",'pop3','pop4','pop5','pop6','pop7','pop8','pop9','pop10','pop11','pop12','pop13','pop14','pop15','pop17','pop18','pop19',); // Remove 'pop1' and 'active' from all other sections
+                });
+              });
+            }
+          });

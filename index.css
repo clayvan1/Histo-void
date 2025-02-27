@@ -329,6 +329,10 @@ main {
 .connective{
   display:none;
 }
+.connective.pop2{
+  display: block;
+}
+
 .cartilage{
   display: none;
 }
@@ -338,64 +342,100 @@ main {
 .bone{
   display: none;
 }
+.bone.pop4{ display: block;}
+
 .nervous-tissue{
   display: none;
 }
-
+.nervous-tissue.pop5{
+  display: block;
+}
 .propulsion{
 display: none;
+}
+.propulsion.pop6{
+  display: block;
 }
 
 .skin{
 display: none;
 }
-n
+.skin.pop7{
+  display: block;
+}
 .nervous-system{
   display: none;
+}
+.nervous-system.pop8{
+  display: block;
 }
 .receptor{
   display: none;
 }
+.receptor.pop9{
+  display: block;
+}
+
 .ear{
 display: none;
 }
 
+.ear.pop10{
+  display: block;
+}
 
 .eye{
   display: none;}
+  .eye.pop11{
+    display: block;
+  }
   .endocrine{
     display: none;
+  }
+  .endocrine.pop12{
+display: block;
   }
 .git{
   display: none;
 }
-
+.git.pop13{ display: block;}
 .git-glands{
   display: none;
+}
+.git-glands.pop14{
+  display: block;
 }
 .respiratory{
   display: none;
 }
-    
+  .respiratory.pop15{
+    display: block;
+  }  
 
 .circulatory{
   display: none;
 }
-
+.circulatory.pop16{
+  display: block;
+}
 .immune{
   display: none;
 }
 
-
+.immune.pop17{
+  display: block;
+}
 .urinary{
   display: none;
 }
-
+.urinary.pop18{
+  display: block;
+}
 .reproductive{
   display: none;
 }
-.nervous-system{
-  display: none;
+.reproductive.pop19{
+  display: block;
 }
 .main-btn{
   display:inline-block;
@@ -437,12 +477,11 @@ display: none;
   display: block;
 }
 .hometext{
-background-position-x: center;
-border-radius: 20rem;
+border-radius: ;
 background-position: center;
   background-size:contain;
-  background-position-y: center -40px;
-  background-image:url(icons/cells-5594885_1280.jpg);
+  background-image:url(icons/cells-5594885_1280\ \(1\).jpg);
+  overflow:hidden;
 }
 .DRAGON{
 font-size: 10PX;
@@ -550,7 +589,7 @@ width: 100%;
   white-space: nowrap;
   border-right: 5px solid white;
   color: white;
-  width: 80%;
+  width: 20%;
   text-align: right;
   animation: typing 5s steps(22) infinite, blink-caret .75s step-end infinite; /* Increased typing duration */
 }
