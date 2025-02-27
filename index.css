@@ -445,10 +445,8 @@ background-position: center;
   background-image:url(icons/cells-5594885_1280.jpg);
   border-radius: 2rem;
 }
-.footer{
-display: inline;
-display: block;
-z-index: 1;
+.DRAGON{
+font-size: 10PX;
 }
 .toggle-btn{
   font-size: 9px;
