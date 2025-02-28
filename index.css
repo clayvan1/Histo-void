@@ -559,7 +559,6 @@ width: 100%;
   transition: transform 0.2s ease-in-out;
 display: grid;
 grid-template-columns: 2fr, 1fr;
-position: relative;
 }
 
 .container h2,
