@@ -241,6 +241,7 @@ align-items: center;
 display: flex;
 margin-top: 20PX;
 margin-bottom:10px;
+
 }
 .hometext h1{
   font-size: 2rem;
@@ -464,11 +465,6 @@ font-size: 1rem;
 
   @media
   (max-width:650px){
-
-.sidebar{
-width: 200px;
-display: none;
-}
 .sidebar.side{
   transform: translateX(-100%);
   width: 0%;
@@ -561,7 +557,8 @@ width: 100%;
   padding: min(3em, 15%);
   width: 100%;
   transition: transform 0.2s ease-in-out;
-
+display: grid;
+grid-template-columns: 2fr, 1fr;
 }
 
 .container h2,
@@ -615,4 +612,26 @@ width: 100%;
 .copyright {
   text-align: center;
   color: white;
+}
+img{
+  border-radius: 3rem;
+}
+.container2{
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  display:grid;
+  grid-template-rows: 1fr,1fr;
+  column-gap: 20px;
+
+}
+ img {
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+img:hover {
+  transform: scale(2.2); 
 }

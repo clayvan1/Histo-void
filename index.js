@@ -29,8 +29,8 @@ const sidebar = document.getElementById("sidebar");
 const body = document.body;
 
 toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("side");
-  body.classList.toggle("sidebar-hidden"); 
+  sidebar.classList.toggle("side",);
+  body.classList.toggle("sidebar-hidden","opacity"); 
 });
         const subMenuButtons = document.querySelectorAll('.sub-menu li a'); // Select all submenu links
         const homeSection = document.querySelector('.Home'); // Select the Home section
