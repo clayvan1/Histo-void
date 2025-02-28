@@ -131,21 +131,22 @@ toggleBtn.addEventListener("click", () => {
               });
             }
           });
-          const imageDivs = document.querySelectorAll('.image');
-
-          imageDivs.forEach(div => {
-            div.addEventListener('click', () => {
-      
-              imageDivs.forEach(otherDiv => {
-                if (otherDiv !== div && otherDiv.classList.contains('enlarge')) {
-                  otherDiv.classList.remove('enlarge');
-                }
-              });
+          document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
         
-              if (div.classList.contains('enlarge')) {
-                div.classList.remove('enlarge');
-              } else {
-                div.classList.add('enlarge');
-              }
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    if (this.classList.contains('enlarge')) {
+                        this.classList.remove('enlarge');
+                    } else {
+                        // Remove 'enlarge' from all other images
+                        images.forEach(otherImg => {
+                            if (otherImg !== this) {
+                                otherImg.classList.remove('enlarge');
+                            }
+                        });
+                        this.classList.add('enlarge');
+                    }
+                });
             });
-          });
+        });
