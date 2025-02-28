@@ -556,7 +556,6 @@ width: 100%;
   margin-bottom: 20px;
   padding: min(3em, 15%);
   width: 100%;
-  transition: transform 0.2s ease-in-out;
 display: grid;
 grid-template-columns: 2fr, 1fr;
 }
@@ -564,10 +563,6 @@ grid-template-columns: 2fr, 1fr;
 .container h2,
 .container p {
   margin-top: 1em;
-}
-
-.container:hover{
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
 }
 
 
