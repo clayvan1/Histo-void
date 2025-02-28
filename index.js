@@ -131,3 +131,21 @@ toggleBtn.addEventListener("click", () => {
               });
             }
           });
+          const imageDivs = document.querySelectorAll('.image');
+
+          imageDivs.forEach(div => {
+            div.addEventListener('click', () => {
+      
+              imageDivs.forEach(otherDiv => {
+                if (otherDiv !== div && otherDiv.classList.contains('enlarge')) {
+                  otherDiv.classList.remove('enlarge');
+                }
+              });
+        
+              if (div.classList.contains('enlarge')) {
+                div.classList.remove('enlarge');
+              } else {
+                div.classList.add('enlarge');
+              }
+            });
+          });

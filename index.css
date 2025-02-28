@@ -570,9 +570,7 @@ grid-template-columns: 2fr, 1fr;
   transition: transform 0.2s ease-in-out; /* Smooth transition */
 }
 
-.container:hover img {
-  transform: scale(2.2); 
-}
+
 .copyright{
   text-align: center;
 }
@@ -628,10 +626,14 @@ img{
   column-gap: 20px;
 
 }
- img {
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
-}
 
-img:hover {
+/*img:hover {
   transform: scale(2.2); 
+}*/
+.image.enlarge{
+  
+  transform: scale(1.8);
+}
+.image{
+  transition: transform 0.4s ease-in-out;
 }
