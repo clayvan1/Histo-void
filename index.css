@@ -631,7 +631,7 @@ img{
 }*/
 img.enlarge{
   
-  transform: scale(1.8);
+  transform: scale(2.2);
 }
 img{
   transition: transform 0.5s ease-in-out;
