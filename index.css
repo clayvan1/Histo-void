@@ -635,8 +635,7 @@ img.enlarge{
   transform: scale(2.2);
 }
 img{
-  transition: transform 0.5s ease-in-out;
-width: 300px;
+  transition: transform 0.5s ease-in-out
 }
 h4{
   font-size: 12px;
