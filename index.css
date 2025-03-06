@@ -277,7 +277,11 @@ margin-bottom:10px;
   width: 300px; /* Adjust width as needed */
   background-color: var(--base-clr);
   border-right: 1px solid var(--line-clr);
-  overflow-y: auto; /* Enables scrolling if the content exceeds viewport height */
+  overflow-y: auto; 
+opacity: 0.8;
+}
+#sidebar{
+  background-color :rgba(0, 0, 0, 0.8) ;
 }
 main {
   margin-left: 300px; /* Same as sidebar width */
