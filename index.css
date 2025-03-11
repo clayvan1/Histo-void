@@ -156,17 +156,17 @@ main p{
 
   h2, p { margin-top: 1em }
 }
-.sub-menu{
-  max-height: 0;
-  overflow: hidden;
-  transition:max-height 0.4s ease-in-out;
+.sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+  >div{
+    overflow: hidden;
+  }
 }
-
-.sub-menu.show{
-max-height:fit-content;
-transition:max-height 0.4s ease-in-out;
+.sub-menu.show {
+grid-template-rows: 1fr;
 }
-
 li{
   font-size: 12px;
 }
@@ -644,3 +644,12 @@ img{
 h4{
   font-size: 12px;
 }
+.dropdown-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-btn.active svg {
+  transform: rotate(180deg);
+}
+
+/* Your other css rules here */

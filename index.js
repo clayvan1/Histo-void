@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+
   const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
   dropdownButtons.forEach(button => {
       button.addEventListener("click", function () {
-          // Close all other dropdowns before opening the selected one
-          document.querySelectorAll(".sub-menu").forEach(menu => {
-              if (menu !== this.nextElementSibling) {
-                  menu.classList.remove("show");
+          // Close all other dropdowns and reset button states
+          document.querySelectorAll(".dropdown-btn").forEach(otherButton => {
+              if (otherButton !== this) {
+                  otherButton.classList.remove("active");
+                  otherButton.nextElementSibling.classList.remove("show");
               }
           });
-
-        
-          this.nextElementSibling.classList.toggle("show");
+  
+          // Toggle the selected dropdown and button state
+          const submenu = this.nextElementSibling;
+          submenu.classList.toggle("show");
+          this.classList.toggle("active");
       });
   });
-
   
   document.addEventListener("click", function (event) {
       if (!event.target.closest(".dropdown-btn")) {
