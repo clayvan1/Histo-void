@@ -493,6 +493,9 @@ background-position: center;
 .DRAGON{
 font-size: 10PX;
 }
+h1{
+  font-size: 20px;
+}
 .toggle-btn{
   font-size: 9px;
   width: 10px;
