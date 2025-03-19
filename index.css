@@ -486,7 +486,6 @@ font-size: 1rem;
 .hometext{
 border-radius: 2rem;
 background-position: center;
-  background-size:contain;
   background-image:url(HOME/la5.png);
   overflow:hidden;
 }
