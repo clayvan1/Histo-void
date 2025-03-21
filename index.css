@@ -203,7 +203,7 @@ li{
 }
 /* Default Sidebar (Visible) */
 #sidebar {
-  width: 300px;
+  width: 300PX;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
@@ -505,6 +505,7 @@ h1{
   font-size: 20px;
 
 }
+
 img{
   width: 180px;
   border-radius: 3rem;
@@ -595,7 +596,7 @@ grid-template-columns: 2fr, 1fr;
   color: white;
   width: 20%;
   text-align: right;
-  animation: typing 5s steps(22) infinite, blink-caret .75s step-end infinite; /* Increased typing duration */
+  animation: typing 5s steps(22) infinite, blink-caret .75s step-end infinite; 
 }
 
 @keyframes typing {
